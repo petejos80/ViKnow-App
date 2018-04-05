@@ -1,3 +1,4 @@
+
 /* FONT STYLES */
 
 /* HEADER STYLES */
@@ -32,13 +33,23 @@ nav {
 /* ============================================================================= */
 
 /* Area where all of the wine data (site main content) is displayed */
-.search_results {
-    background-color: white;
-    height: 500px;
-    margin: 20px;
-    max-width: 95%;
+
+body {
+    position: relative;
 }
 
-.container {
-    width: 95%;
+.row {
+    position: relative;
+    z-index: 2;
 }
+
+#fadebackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+
