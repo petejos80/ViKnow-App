@@ -1,0 +1,21 @@
+body {
+    position: relative;
+}
+
+.row {
+    position: relative;
+    z-index: 2;
+}
+
+#fadebackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+
+
+
