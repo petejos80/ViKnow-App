@@ -46,42 +46,46 @@
     <div class="row">
             
         <!--- container within main section to hold our wine results in table format-->
-        <div class="section row" style="max-width: 800px; margin: auto;">
-            <table>
-                <tbody>
-                    <!-- Each row holds one returned result -->
-                    <tr class="hoverable" style="background-color: white;">
-                        <!-- Column 1 of table holds wine image -->
-                        <td class="center-align" id="wine-image" style="width: 25%;"><img src="https://lh3.googleusercontent.com/M3FH8AlEUywA0xJnTFxlBhheh2G0YhQwzhdz-S511i50eaezty_-uV6l2t1GXGs4tei-knZjtkJr2F6eQQyyVtGLGhu3xpY=s750" height="200px" width="200px">
-                        </td> 
-                        <!-- Column 2a of table holds basic wine info                                -->
-                        <td class="right-align" id="wine-info-heading" style="width: 10%">
-                            <ul>
-                                <li><div>Name</div></li>
-                                <li><div>Varietal</div></li>
-                                <li><div>Vintage</div></li>
-                            </ul>
-                        </td>
-                        <!-- Column 2b of table holds basic wine info                                -->
-                        <td id="wine-info-body" style="width: 40%">
-                            <ul>
-                                <li><div id="wine-name"></div></li>
-                                <li><div id="wine-varietal"></div></li>
-                                <li><div id="wine-vintage"></div></li>
-                            </ul>
-                        </td>                        
-                        <!-- Column 3 holds links to recipes -->
-                        <td id="wine-pairings" style="width: 25%">
-                            <ul>
-                                <li><div id="recipe">Recipe1</div></li>
-                                <li><div id="recipe">Recipe2</div></li>
-                                <li><div id="recipe">Recipe3</div></li>
-                            </ul>
-                        </td>
-                    </tr>
+        <div id="main" class="section row" style="max-width: 800px; margin: auto;">
 
-                </tbody>
+
+            <table>
+                <!-- Each row holds one returned result -->
+                <tr class="hoverable" style="background-color: white;">
+                    <!-- Column 1 of table holds wine image -->
+                    <td class="center-align" id="wine-image" style="width: 25%;"><img src="https://lh3.googleusercontent.com/M3FH8AlEUywA0xJnTFxlBhheh2G0YhQwzhdz-S511i50eaezty_-uV6l2t1GXGs4tei-knZjtkJr2F6eQQyyVtGLGhu3xpY=s750" height="200px" width="200px">
+                    </td> 
+                    <!-- Column 2a of table holds basic wine info                                -->
+                    <td class="right-align" id="wine-info-heading" style="width: 10%">
+                        <ul>
+                            <li><div>Name</div></li>
+                            <li><div>Varietal</div></li>
+                            <li><div>Vintage</div></li>
+                        </ul>
+                    </td>
+                    <!-- Column 2b of table holds basic wine info                                -->
+                    <td id="wine-info-body" style="width: 40%;">
+                        <ul>
+                            <li><div id="wine-name"></div></li>
+                            <li><div id="wine-varietal"></div></li>
+                            <li><div id="wine-vintage"></div></li>
+                        </ul>
+                    </td>                        
+                    <!-- Column 3 holds links to recipes -->
+                    <td id="wine-pairings" style="width: 25%;">
+                        <ul>
+                            <li><div id="recipe">Recipe1</div></li>
+                            <li><div id="recipe">Recipe2</div></li>
+                            <li><div id="recipe">Recipe3</div></li>
+                        </ul>
+                    </td>
+                </tr>
             </table>
+
+            <br>
+
+            
+
         </div>      
     </div>
 
