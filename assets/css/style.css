@@ -1,6 +1,24 @@
 body {
-
-    background-image: url("http://www.trbimg.com/img-550c8582/turbine/bal-shop-half-price-wine-bottles");
-    /* background-size: cover; */
-    /* background-color: darkslategray; */
+    position: relative;
 }
+
+.row {
+    position: relative;
+    z-index: 2;
+}
+
+#fadebackground {
+    /* background-image: url("http://www.trbimg.com/img-550c8582/turbine/bal-shop-half-price-wine-bottles"); */
+
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+
+
+
