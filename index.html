@@ -13,107 +13,64 @@
 </head>
 
 <body>
-
-    <!-- Just a divider sample, probably wont be used -->
-    <div class="divider" style="background-color: rgb(23, 7, 82); height:5px;"></div>
-
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <!-- Header inside this section -->
-    <div class="section row"  style="background-color: white">
-        <div class="col s6"><h1 style="text-align: left; margin-top: 0px; margin-bottom: 0px">ViKnow</h1></div>
-        <div class="col s6 nav-wrapper">
-            <form>
-                <div class="input-field">
-                    <input placeholder="Search" id="search" type="search" required>
-                    <label class="label-icon" for="search">
-                        <i class="material-icons">
-                            <i class="fas fa-search"></i>
-                        </i>
-                    </label>
-                    <i class="material-icons"></i>
-                </div>
-            </form>
-        </div>
-</div>
-
-<!-- Just another divider sample, probably wont be used -->
-<div class="divider" style="background-color: rgb(23, 7, 82); height:5px"></div>
-    
-   
-<!--- container to hold our 2 or 3 rows which contain the search bar on the left and the search reults in the middle, and maybe something on the right side -->
-<div class="row">
-        
-        
- <!--- container to hold our  -->
-            <div class="col s1" style="background-color: white;height:500px"></div>
-
-            <div class="col s10" style="background-color: white;height:500px">
-                    <table>
-                            <tbody>
-                              <tr>
-                                <td>Wine Image</td>
-                                <td>
-                                <ul>
-                                <li><div>Name</div></li>
-                                <li><div>Varietal</div></li>
-                                <li><div>Vintage</div></li>
-                                </ul>
-                                </td>
-                                <td><ul>
-                                <li><div>Recipe1</div></li>
-                                <li><div>Recipe2</div></li>
-                                <li><div>Recipe3</div></li>
-                                </ul></td>
-                              </tr>
-                              <tr>
-                                <td>Wine Image</td>
-                                <td>
-                                <ul>
-                                <li><div>Name</div></li>
-                                <li><div>Varietal</div></li>
-                                <li><div>Vintage</div></li>
-                                </ul>
-                                </td>
-                                <td><ul>
-                                <li><div>Recipe1</div></li>
-                                <li><div>Recipe2</div></li>
-                                <li><div>Recipe3</div></li>
-                                </ul></td>
-                              </tr>
-                              <tr>
-                                <td>Wine Image</td>
-                                <td>
-                                <ul>
-                                <li><div>Name</div></li>
-                                <li><div>Varietal</div></li>
-                                <li><div>Vintage</div></li>
-                                </ul>
-                                </td>
-                                <td><ul>
-                                <li><div>Recipe1</div></li>
-                                <li><div>Recipe2</div></li>
-                                <li><div>Recipe3</div></li>
-                                </ul></td>
-                              </tr>
-                            </tbody>
-                          </table>
+    <div class="section z-depth-3 row"  style="background-color: white">
+        <div class="row" style="max-width: 800px; margin: auto;">
+            <div class="col s6"><h1 style="text-align: left; margin-top: 0px; margin-bottom: 0px">ViKnow</h1></div>
+            <div class="col s6 right">
+                <form>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="search-box" type="text" class="validate">
+                            <label for="search-box">Search</label>
+                        </div>     
+                    </div>         
+                </form>
             </div>
-            <div class="col s1" style="background-color: white;height:500px">
-                    <!-- Teal page content  -->
-                  </div>
-      
-          </div>
-
+        </div>
+    </div>
     
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!--- main section -->
+    <div class="row">
+            
+        <!--- container within main section to hold our wine results in table format-->
+        <div class="section row" style="background-color: white; max-width: 800px; margin: auto;">
+            <table>
+                <tbody>
+                    <!-- Each row holds one returned result -->
+                    <tr class="hoverable">
+                        <!-- Column 1 of table holds wine image -->
+                        <td id="wine-image" style="width: 25%;"><img src="https://lh3.googleusercontent.com/M3FH8AlEUywA0xJnTFxlBhheh2G0YhQwzhdz-S511i50eaezty_-uV6l2t1GXGs4tei-knZjtkJr2F6eQQyyVtGLGhu3xpY=s750" height="200px" width="200px">
+                        </td> 
+                        <!-- Column 2 of table holds basic wine info                                -->
+                        <td id="wine-info" style="width: 50%">
+                            <ul>
+                                <li><div>Name</div></li>
+                                <li><div>Varietal</div></li>
+                                <li><div>Vintage</div></li>
+                            </ul>
+                        </td>
+                        <!-- Column 3 holds links to recipes -->
+                        <td id="wine-pairings" style="width: 25%">
+                            <ul>
+                                <li><div>Recipe1</div></li>
+                                <li><div>Recipe2</div></li>
+                                <li><div>Recipe3</div></li>
+                            </ul>
+                        </td>
+                    </tr>
 
-
-
-
-
-
+                </tbody>
+            </table>
+        </div>      
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="./assets/javascript/viknow.js"></script>
+
 </body>
 
 </html>
