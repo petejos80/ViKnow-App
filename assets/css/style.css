@@ -1,0 +1,44 @@
+/* FONT STYLES */
+
+/* HEADER STYLES */
+/* ============================================================================ */
+.header {
+    background-color: white;
+    border-bottom: 3px solid rgb(23, 7, 82);
+}
+
+.logo {
+    text-align: left;
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    font-family: 'Satisfy', cursive;
+}
+
+/* WINE SEARCH BAR */
+nav .input-field label i {
+    color: #666;
+}
+
+nav .input-field label.active i {
+    color: #666;
+}
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 0px 0px 0px rgba(0,0,0,0.12), 0px 2px 0px 0px rgba(0,0,0,0.2);
+}
+
+/* BODY STYLES */
+/* ============================================================================= */
+
+/* Area where all of the wine data (site main content) is displayed */
+.search_results {
+    background-color: white;
+    height: 500px;
+    margin: 20px;
+    max-width: 95%;
+}
+
+.container {
+    width: 95%;
+}
