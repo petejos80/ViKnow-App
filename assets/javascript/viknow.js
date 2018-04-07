@@ -85,11 +85,13 @@ var wine = new Bloodhound({
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     remote: {
-        url: 'http://api.snooth.com/wines/?q=%QUERY&api_key=f22e6ce68f5e5002e71c20bcba477e7d',
+        url: 'http://api.snooth.com/wines/?q=%QUERY&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&s=sr',
         filter: function (wine) {
+            console.log(wine)
             // Map the remote source JSON array to a JavaScript object array
-            return $.map(wine.results, function (wines) {
-                console.log(wine.results);
+            return $.map(wine.wines, function (wines) {
+                // console.log(wines);
+                // console.log(wine);
                 return {
                     value: wines.name
                 };
@@ -137,10 +139,10 @@ $('.typeahead').typeahead(null, {
 //     }
 // });
 
-// // Initialize the Bloodhound suggestion engine
+// Initialize the Bloodhound suggestion engine
 // movies.initialize();
 
-// // Instantiate the Typeahead UI
+// Instantiate the Typeahead UI
 // $('.typeahead').typeahead(null, {
 //     displayKey: 'value',
 //     source: movies.ttAdapter()
