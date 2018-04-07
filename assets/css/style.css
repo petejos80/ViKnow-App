@@ -25,6 +25,7 @@ nav .input-field label.active i {
 }
 
 nav {
+    float: top;
     background-color: #fff;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 0px 0px 0px rgba(0,0,0,0.12), 0px 2px 0px 0px rgba(0,0,0,0.2);
 }
@@ -44,12 +45,11 @@ body {
 }
 
 #fadebackground {
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 0;
     width: 100%;
     height: auto;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 /* BODY CONTENT STYLES */
