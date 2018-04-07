@@ -23,7 +23,7 @@ $("document").ready(function () {
     $("#search").keypress(function (e) {
 
         var search = $("#search").val().trim();
-        var queryURL = "http://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
+        var queryURL = "https://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
 
         if (e.which === 13 && $("#search").val().trim() != "") {
             event.preventDefault();
@@ -61,7 +61,7 @@ $("document").ready(function () {
 
                 // Recipe Call and Response
                 for (m = 0; m < wineCodeArray.length; m++) {
-                    var pairingURL = "http://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
+                    var pairingURL = "https://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
                     $.ajax({
                         url: pairingURL,
                         method: "GET"
