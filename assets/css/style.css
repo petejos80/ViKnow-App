@@ -25,11 +25,12 @@ nav .input-field label.active i {
 }
 
 nav {
+    float: top;
     background-color: #fff;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14), 0 0px 0px 0px rgba(0,0,0,0.12), 0px 2px 0px 0px rgba(0,0,0,0.2);
 }
 
-/* BODY STYLES */
+/* BODY BACKGROUND STYLES */
 /* ============================================================================= */
 
 /* Area where all of the wine data (site main content) is displayed */
@@ -43,13 +44,13 @@ body {
 }
 
 #fadebackground {
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 0;
     width: 100%;
     height: auto;
-    opacity: 0.6;
+    opacity: 0.8;
 }
+
 
 /* STYLES FOR AUTO-SUGGEST SEARCH */
 /* ================================================================================ */
@@ -171,4 +172,47 @@ p {
 }
 .example-arabic .tt-dropdown-menu {
     text-align: right;
+}
+
+  
+/* BODY CONTENT STYLES */
+/* ============================================================================= */
+
+#wine-row {
+    background-color: white;
+}
+
+#wine-image {
+    width: 35%;
+}
+
+#image-style {
+    height: 200px;
+    image-rendering: auto;
+}
+
+#wine-info-body {
+    width: 30%;
+}
+
+#wine-name {
+    font-weight: bold;
+}
+
+#wine-varietal {
+    font-weight: normal;
+}
+
+#wine-vintage {
+    font-weight: normal;
+}
+
+#wine-pairings {
+    width: 35%;
+    padding-left: 20px;
+    align-content: flex-start;
+}
+
+#recommended-recipes {
+    align-items: inherit;
 }
