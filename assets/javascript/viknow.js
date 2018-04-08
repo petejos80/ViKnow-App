@@ -209,16 +209,54 @@ $("document").ready(function () {
                                 td2b.append(ul2b);
 
                                 var td3 = $("<td id='wine-pairings'>")
+
+
                                     var ul3 = $("<ul>");
-                                        var listRecipe = $("<li id='recipe'>")
                                         var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
-                                        console.log(recipeName1Array[index])
-                                        listRecipe.append("<a class='tooltipped' data-position='bottom' data-delay='50' html='true' data-tooltip=" + recipeName1Array[index] + "><img width='30%' height='auto' src=" + recipeImageURL1Array[index] + "></a>");
-                                        listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL2Array[index] + ">");
-                                        listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL3Array[index] + ">");
-                                    ul3.append(listHeader);
-                                    ul3.append($("<br>"))
-                                    ul3.append(listRecipe);
+                                        var listRecipe1 = $("<li id='recipe1'>").text(recipeName1Array[index]);
+                                        // var listRecipe1 = $("<li id='recipe1'>").text(recipeName1Array[index]);
+                                        var listRecipe2 = $("<li id='recipe2'>").text(recipeName2Array[index]);
+                                        var listRecipe3 = $("<li id='recipe3'>").text(recipeName3Array[index]);
+                                        // var recipeLink1 = listRecipe1.link("https://www.w3schools.com");
+                                                                  
+                                        var newRecipe1 = $("<a />", {
+                                            name : "Recipe One",
+                                            href : recipeURL1Array[index],
+                                            target : "_blank",
+                                            text : recipeName1Array[index]
+                                        });
+                                        var newRecipe2 = $("<a />", {
+                                            name : "Recipe Two",
+                                            href : recipeURL2Array[index],
+                                            target : "_blank",
+                                            text : recipeName2Array[index]
+                                        });
+                                        var newRecipe3 = $("<a />", {
+                                            name : "Recipe Three",
+                                            href : recipeURL3Array[index],
+                                            target : "_blank",
+                                            text : recipeName3Array[index]
+                                        });
+                                        
+                                        ul3.append(listHeader);
+                                        ul3.append($("<br>"));
+                                        if (recipeName1Array[index] == "No Recipes Found") {
+                                         ul3.append(listRecipe1);
+                                        }
+                                        else {ul3.append(newRecipe1);}
+                                        ul3.append(newRecipe2);
+                                        ul3.append(newRecipe3);
+
+                                    // var ul3 = $("<ul>");
+                                    //     var listRecipe = $("<li id='recipe'>")
+                                    //     var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
+                                    //     console.log(recipeName1Array[index])
+                                    //     listRecipe.append("<a class='tooltipped' data-position='bottom' data-delay='50' html='true' data-tooltip=" + recipeName1Array[index] + "><img width='30%' height='auto' src=" + recipeImageURL1Array[index] + "></a>");
+                                    //     listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL2Array[index] + ">");
+                                    //     listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL3Array[index] + ">");
+                                    // ul3.append(listHeader);
+                                    // ul3.append($("<br>"))
+                                    // ul3.append(listRecipe);
                                 td3.append(ul3);
                             tr.append(td1);
                             tr.append(td2b);
