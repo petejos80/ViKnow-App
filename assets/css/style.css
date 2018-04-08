@@ -183,7 +183,7 @@ p {
 }
 
 #wine-image {
-    width: 35%;
+    width: 30%;
 }
 
 #image-style {
@@ -208,11 +208,14 @@ p {
 }
 
 #wine-pairings {
-    width: 35%;
+    width: 40%;
     padding-left: 20px;
     align-content: flex-start;
 }
 
 #recommended-recipes {
     align-items: inherit;
+    border-bottom: #333333;
+    border-width: 3px;
+    font-weight: bold;
 }

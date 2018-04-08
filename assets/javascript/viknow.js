@@ -1,5 +1,7 @@
 
 $("document").ready(function () {
+    $("#search").focus();
+
 
     // =========================================================================================================
     // AUTO-COMPLETE SEARCH SUGGESTIONS
@@ -61,6 +63,8 @@ $("document").ready(function () {
 
     // Search Call and Response
     $("#search").keypress(function (e) {
+        // empty previous results before displaying new results
+        $("#main").text("");
 
         var search = $("#search").val().trim();
         var queryURL = "http://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
@@ -114,7 +118,8 @@ $("document").ready(function () {
                 }
 
                 setTimeout(function () {
-
+                    $("#search").val("");
+                    $("#search").focus();
                     for (x = 0; x < wineCodeArrayTwo.length; x++) {
                         // console.log(wineCodeArrayTwo[x]);
                         console.log(wineCodeArrayTwo[x].name);
@@ -176,8 +181,12 @@ $("document").ready(function () {
             // ----------------------------------------------------------------------------------------------------------
                     // dynamically create a table row to hold wine conteNt for each wine result returned by API
                     for (index=0; index<winePairingCodeArray.length; index++) {
-                        var wineRow = $("<table>");
-                            var tr = $("<tr id='wine-row' class='hoverable'>");
+                        $('.collapsible').collapsible();
+                        $('.modal').modal();
+                        $('.tooltipped').tooltip({delay: 50});
+
+                        var wineRow = $("<table class='collapsible' data-collapsible='accordion'>");
+                            var tr = $("<tr id='wine-row' class='hoverable collapsible-header'>");
                                 var td1 = $("<td id='wine-image' class='center-align'>");
                                     var img = $("<img id='image-style' class='center-align'>");
                                     img.attr("src", (wineImageURLArray[index]));
@@ -187,29 +196,55 @@ $("document").ready(function () {
                                     var ul2b = $("<ul>");
                                         var li1 = $("<li id='wine-name'>").text(wineNameArray[index]);
                                         var li2 = $("<li id='wine-varietal'>").text(wineVarietalArray[index]);
-                                        var li3 = $("<li id='wine-vintage'>").text(wineVarietalArray[index]);
+                                        var li3 = $("<li id='wine-vintage'>").text(wineVintageArray[index]);
+                                        var li4 = $("<li id='more-info-btn'>").append($("<button class='modal-trigger btn' href='#modal1' id='" + index + "'>").text("More Info"))
                                     ul2b.append(li1);
+                                    ul2b.append($("<br>"));
                                     ul2b.append(li2);
                                     ul2b.append(li3);
+                                    ul2b.append($("<br>"));
+                                    ul2b.append(li4);
+                                    
+
                                 td2b.append(ul2b);
 
                                 var td3 = $("<td id='wine-pairings'>")
                                     var ul3 = $("<ul>");
+                                        var listRecipe = $("<li id='recipe'>")
                                         var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
-                                        var listRecipe = $("<li id='recipe'>").text("Insert Recipe Name");
+                                        console.log(recipeName1Array[index])
+                                        listRecipe.append("<a class='tooltipped' data-position='bottom' data-delay='50' html='true' data-tooltip=" + recipeName1Array[index] + "><img width='30%' height='auto' src=" + recipeImageURL1Array[index] + "></a>");
+                                        listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL2Array[index] + ">");
+                                        listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL3Array[index] + ">");
                                     ul3.append(listHeader);
+                                    ul3.append($("<br>"))
                                     ul3.append(listRecipe);
                                 td3.append(ul3);
                             tr.append(td1);
                             tr.append(td2b);
                             tr.append(td3);
+                            var trbody = $("<tr class='collapsible-body'>");
+                            var pbody = $("<p>").text("testing")
+                            trbody.append(pbody)
                         wineRow.append(tr);
+                        wineRow.append(trbody);
                         $("#main").append(wineRow);
                         $("#main").append($("<br>"));
                     }
             // ----------------------------------------------------------------------------------------------------------
+                    // More Info Button click event
+                    $(".modal-trigger").on("click", function() {
+                        var valId = $(this).attr("id");
+                        console.log(valId)
+                        $(".modalh").text(wineNameArray[valId])
+                        $(".modalp").text(wineNotesArray[valId])
+
+                    });
+
 
                 }, 1500);
+
+
 
                 // .then(function(response) {  ------------------ ending bracket              
             })
