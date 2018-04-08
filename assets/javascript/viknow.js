@@ -220,18 +220,21 @@ $("document").ready(function () {
                                         // var recipeLink1 = listRecipe1.link("https://www.w3schools.com");
                                                                   
                                         var newRecipe1 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe One",
                                             href : recipeURL1Array[index],
                                             target : "_blank",
                                             text : recipeName1Array[index]
                                         });
                                         var newRecipe2 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe Two",
                                             href : recipeURL2Array[index],
                                             target : "_blank",
                                             text : recipeName2Array[index]
                                         });
                                         var newRecipe3 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe Three",
                                             href : recipeURL3Array[index],
                                             target : "_blank",
