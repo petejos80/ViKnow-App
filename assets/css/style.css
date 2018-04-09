@@ -39,6 +39,28 @@ body {
     position: relative;
 }
 
+footer {
+    position: fixed;
+    width: 600px;
+    bottom: 0;    
+    right: 10px;
+}
+
+.black-box {
+    background-color: black;
+    color: white;
+}
+
+.white-box {
+    background-color: white
+}
+
+
+
+.center-align {
+    width: 100%;
+}
+
 .row {
     position: relative;
 }
@@ -49,6 +71,7 @@ body {
     width: 100%;
     height: auto;
     opacity: 0.8;
+    z-index: -1;
 }
 
 

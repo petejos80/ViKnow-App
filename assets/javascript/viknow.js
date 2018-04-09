@@ -50,6 +50,7 @@ $("document").ready(function () {
     var wineCodeArray = [];
     var wineCodeArrayTwo = [];
     var wineNotesArray = []; //wineNotesArray.push(wineCodeArrayTwo[x].wm_notes)
+    var wineTastingNotesArray = []; 
     var winePairingCodeArray = []; // winePairingCodeArray.push(wineCodeArrayTwo[x].code); - example: baus-family-vineyards-knights-valley-merlot-2007 
     var recipeName1Array = []; // recipeName1Array.push(wineCodeArrayTwo[x].recipes[0].name); --OR-- recipeName1Array.push("No Recipes Found");
     var recipeName2Array = []; // recipeName2Array.push(wineCodeArrayTwo[x].recipes[1].name); --OR-- recipeName2Array.push("No Recipes Found");
@@ -79,6 +80,7 @@ $("document").ready(function () {
             wineCodeArray.length = 0;
             wineCodeArrayTwo.length = 0;
             wineNotesArray.length = 0;
+            wineTastingNotesArray.length = 0;
             winePairingCodeArray.length = 0;
             recipeName1Array.length = 0;
             recipeName2Array.length = 0;
@@ -129,6 +131,7 @@ $("document").ready(function () {
                         wineVarietalArray.push(wineCodeArrayTwo[x].varietal)
                         wineVintageArray.push(wineCodeArrayTwo[x].vintage)
                         wineNotesArray.push(wineCodeArrayTwo[x].wm_notes)
+                        wineTastingNotesArray.push(wineCodeArrayTwo[x].winery_tasting_notes)
                         wineRegionArray.push(wineCodeArrayTwo[x].region)
 
                         if (($.type(wineCodeArrayTwo[x].recipes[0])) == "object") {
@@ -175,6 +178,7 @@ $("document").ready(function () {
                     console.log(wineImageURLArray);
                     console.log(wineVarietalArray);
                     console.log(wineNotesArray);
+                    console.log(wineTastingNotesArray);
                     console.log(wineCodeArrayTwo);
                     console.log(wineCodeArrayTwo.length)
 
@@ -185,7 +189,7 @@ $("document").ready(function () {
                         $('.modal').modal();
                         $('.tooltipped').tooltip({delay: 50});
 
-                        var wineRow = $("<table class='collapsible' data-collapsible='accordion'>");
+                        var wineRow = $("<table class=''>");
                             var tr = $("<tr id='wine-row' class='hoverable collapsible-header'>");
                                 var td1 = $("<td id='wine-image' class='center-align'>");
                                     var img = $("<img id='image-style' class='center-align'>");
@@ -210,7 +214,7 @@ $("document").ready(function () {
 
                                 var td3 = $("<td id='wine-pairings'>")
 
-
+                                    // displays name of recipes (with link to recipe page) under Recommended Recipes
                                     var ul3 = $("<ul>");
                                         var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
                                         var listRecipe1 = $("<li id='recipe1'>").text(recipeName1Array[index]);
@@ -220,18 +224,21 @@ $("document").ready(function () {
                                         // var recipeLink1 = listRecipe1.link("https://www.w3schools.com");
                                                                   
                                         var newRecipe1 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe One",
                                             href : recipeURL1Array[index],
                                             target : "_blank",
                                             text : recipeName1Array[index]
                                         });
                                         var newRecipe2 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe Two",
                                             href : recipeURL2Array[index],
                                             target : "_blank",
                                             text : recipeName2Array[index]
                                         });
                                         var newRecipe3 = $("<a />", {
+                                            class : "truncate",
                                             name : "Recipe Three",
                                             href : recipeURL3Array[index],
                                             target : "_blank",
@@ -246,7 +253,7 @@ $("document").ready(function () {
                                         else {ul3.append(newRecipe1);}
                                         ul3.append(newRecipe2);
                                         ul3.append(newRecipe3);
-
+                                    // displays image of recipes under Recommended Recipes
                                     // var ul3 = $("<ul>");
                                     //     var listRecipe = $("<li id='recipe'>")
                                     //     var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
@@ -275,14 +282,12 @@ $("document").ready(function () {
                         var valId = $(this).attr("id");
                         console.log(valId)
                         $(".modalh").text(wineNameArray[valId])
-                        $(".modalp").text(wineNotesArray[valId])
+                        $(".modalnotes").text(wineNotesArray[valId])
+                        $(".modaltaste").text(wineTastingNotesArray[valId])
 
                     });
 
-
-                }, 1500);
-
-
+                }, 1000);
 
                 // .then(function(response) {  ------------------ ending bracket              
             })
