@@ -6,7 +6,7 @@ $("document").ready(function () {
     // =========================================================================================================
     // AUTO-COMPLETE SEARCH SUGGESTIONS
 
-    // var queryURL = "http://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=100";
+    // var queryURL = "https://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=100";
     // Instantiate the Bloodhound suggestion engine
 
     var wine = new Bloodhound({
@@ -15,7 +15,7 @@ $("document").ready(function () {
         },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         remote: {
-            url: 'http://api.snooth.com/wines/?q=%QUERY&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&s=sr',
+            url: 'https://api.snooth.com/wines/?q=%QUERY&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&s=sr',
             filter: function (wine) {
                 console.log(wine)
                 // Map the remote source JSON array to a JavaScript object array
@@ -68,7 +68,7 @@ $("document").ready(function () {
         $("#main").text("");
 
         var search = $("#search").val().trim();
-        var queryURL = "http://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
+        var queryURL = "https://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
 
         if (e.which === 13 && $("#search").val().trim() != "") {
             event.preventDefault();
@@ -107,7 +107,7 @@ $("document").ready(function () {
 
                 // Recipe Call and Response
                 for (m = 0; m < wineCodeArray.length; m++) {
-                    var pairingURL = "http://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
+                    var pairingURL = "https://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
                     $.ajax({
                         url: pairingURL,
                         method: "GET"
