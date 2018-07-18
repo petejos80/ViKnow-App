@@ -7,7 +7,7 @@ Viknow is an application built to assist waiters and waitresses in suggesting fo
 * Clone the Github repository to your local machine:
 
 ```
-https://github.com/petejos80/ViKnow-App.git
+git clone https://github.com/petejos80/ViKnow-App.git
 ```
 
 * Open the index.html file in your default browser
