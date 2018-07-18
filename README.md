@@ -2,6 +2,10 @@
 
 Viknow is an application built to assist waiters and waitresses in suggesting food/wine pairings for customers. The application uses the Snooth Food and Wine API to fetch food and wine pairings, while the Typeahead.js library is used to provide real-time auto-complete and auto-suggest functionality to users based on their input.
 
+## Project Background
+
+This project was built by a team including myself (petejos80) and three other developers.  My core contribution to this prohject was integrating the Typeahead.js library and the Google Maps API. 
+
 ## Getting Started
 
 * Clone the Github repository to your local machine:
