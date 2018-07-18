@@ -4,7 +4,7 @@ Viknow is an application built to assist waiters and waitresses in suggesting fo
 
 ## Project Background
 
-This project was built by a team including myself (petejos80) and three other developers.  My core contribution to this prohject was integrating the Typeahead.js library and the Google Maps API. 
+This project was built by a team of myself (petejos80) and three other developers.  My core contribution to this prohject was integrating the Typeahead.js library and the Google Maps API. 
 
 ## Getting Started
 
