@@ -1,24 +1,28 @@
-Project #1
+# ViKnow
 
-Title: ViKnow (name pending change if we need to switch to beer)
+Viknow is an application built to assist waiters and waitresses in suggesting food/wine pairings for customers. The application uses the Snooth Food and Wine API to fetch food and wine pairings, while the Typeahead.js library is used to provide real-time auto-complete and auto-suggest functionality to users based on their input.
 
-Team members: Adam, Andy, Joe, Doreen, Ben
+## Getting Started
 
-Project description: Create training tool for potential servers to learn what wines pair best with which dishes.
+* Clone the Github repository to your local machine:
 
-Sketch: See notebook
+```
+https://github.com/petejos80/ViKnow-App.git
+```
 
-APIs to be used: (dependent on obtaining access) 
-    Snooth - wine
-    Foodpairing - wine
-    Spoonacular (Food API) - wine/beer
-    Beer punk - beer (limited scope)
+* Open the index.html file in your default browser
+
+## Built With
+
+* [Materialize](https://materializecss.com/) - for front-end design
+* [JQuery](https://jquery.com/) - for Javascript functionality
+* [Snooth API](https://www.programmableweb.com/api/snooth) - for food/wine pairing suggestions
+* [Typeahead.js](https://twitter.github.io/typeahead.js/) - for auto-suggest functionality
+* [Google Maps API](https://cloud.google.com/maps-platform/) - for locating nearby vendors
+
+## Screenshot
+
+![Alt Text](https://media.giphy.com/media/1oKHWXhISiW7tH9GA0/giphy.gif)
 
 
-Breakdown of tasks: 
-    Adam - Project Management & Information Architecture (back-end with Andy)
-    Andy - Back-end Development
-    Ben - Front-end Development
-    Doreen - Interface/Experience Design
-    Joe - Front-end development
                                                                                  
