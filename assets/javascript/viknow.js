@@ -15,7 +15,7 @@ $("document").ready(function () {
         },
         queryTokenizer: Bloodhound.tokenizers.whitespace,
         remote: {
-            url: 'https://api.snooth.com/wines/?q=%QUERY&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&s=sr',
+            url: 'http://api.snooth.com/wines/?q=%QUERY&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&s=sr',
             filter: function (wine) {
                 console.log(wine)
                 // Map the remote source JSON array to a JavaScript object array
@@ -68,7 +68,7 @@ $("document").ready(function () {
         $("#main").text("");
 
         var search = $("#search").val().trim();
-        var queryURL = "https://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
+        var queryURL = "http://api.snooth.com/wines/?q=" + search + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71&n=25";
 
         if (e.which === 13 && $("#search").val().trim() != "") {
             event.preventDefault();
@@ -107,7 +107,7 @@ $("document").ready(function () {
 
                 // Recipe Call and Response
                 for (m = 0; m < wineCodeArray.length; m++) {
-                    var pairingURL = "https://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
+                    var pairingURL = "http://api.snooth.com/wine/?food=1&id=" + wineCodeArray[m] + "&akey=5pgy0fabib7s89ky9l5fx24ha754svspwnata652tn7gdr71";
                     $.ajax({
                         url: pairingURL,
                         method: "GET"
@@ -253,17 +253,6 @@ $("document").ready(function () {
                                         else {ul3.append(newRecipe1);}
                                         ul3.append(newRecipe2);
                                         ul3.append(newRecipe3);
-                                    // displays image of recipes under Recommended Recipes
-                                    // var ul3 = $("<ul>");
-                                    //     var listRecipe = $("<li id='recipe'>")
-                                    //     var listHeader = $("<li id='recommended-recipes'>").text("Recommeded Recipes:");
-                                    //     console.log(recipeName1Array[index])
-                                    //     listRecipe.append("<a class='tooltipped' data-position='bottom' data-delay='50' html='true' data-tooltip=" + recipeName1Array[index] + "><img width='30%' height='auto' src=" + recipeImageURL1Array[index] + "></a>");
-                                    //     listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL2Array[index] + ">");
-                                    //     listRecipe.append("<img width='30%' height='auto' src=" + recipeImageURL3Array[index] + ">");
-                                    // ul3.append(listHeader);
-                                    // ul3.append($("<br>"))
-                                    // ul3.append(listRecipe);
                                 td3.append(ul3);
                             tr.append(td1);
                             tr.append(td2b);
