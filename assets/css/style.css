@@ -33,8 +33,6 @@ nav {
 /* BODY BACKGROUND STYLES */
 /* ============================================================================= */
 
-/* Area where all of the wine data (site main content) is displayed */
-
 body {
     position: relative;
 }
@@ -75,6 +73,7 @@ footer {
 
 /* STYLES FOR AUTO-SUGGEST SEARCH */
 /* ================================================================================ */
+
 @font-face {
     font-family:"Prociono";
     src: url("../font/Prociono-Regular-webfont.ttf");
